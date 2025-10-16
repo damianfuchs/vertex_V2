@@ -1,6 +1,6 @@
 # 🏢 VERTEX - Sistema de Gestión de Inventario
 
-Sistema completo de gestión de inventario desarrollado en PHP y MySQL, diseñado para pequeñas y medianas empresas.
+Sistema de Gestión de Inventario Modular y Escalable (PHP & MySQL). Originalmente diseñado para la empresa Vertex, permite una fácil y rápida adaptación a las necesidades de cualquier tipo de pequeña o mediana empresa (PYME) o negocio que requiera un control de inventario robusto.
 
 ## 📋 Características
 
@@ -16,81 +16,11 @@ Sistema completo de gestión de inventario desarrollado en PHP y MySQL, diseñad
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Backend**: PHP 8.x
-- **Base de Datos**: MySQL / MariaDB
+- **Backend**: PHP
+- **Base de Datos**: MySQL
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 - **Framework CSS**: Bootstrap 5.3
 - **Iconos**: Bootstrap Icons
-
-## 📦 Requisitos del Sistema
-
-### Desarrollo Local
-- PHP 8.0 o superior
-- MySQL 5.7 o superior / MariaDB 10.4 o superior
-- Apache con mod_rewrite habilitado
-- Extensiones PHP requeridas:
-  - mysqli
-  - gd (para procesamiento de imágenes)
-  - fileinfo
-
-### Hosting (Hostinger)
-- Plan de hosting con soporte PHP 8.x
-- Base de datos MySQL
-- Acceso FTP o File Manager
-- Certificado SSL (recomendado)
-
-## 🚀 Instalación
-
-### Instalación Local (XAMPP/WAMP/MAMP)
-
-1. **Clonar o descargar el proyecto**
-   \`\`\`bash
-   git clone [tu-repositorio]
-   cd VERTEX-INV
-   \`\`\`
-
-2. **Configurar la base de datos**
-   - Abrí phpMyAdmin (http://localhost/phpmyadmin)
-   - Creá una nueva base de datos llamada `vertex_inv`
-   - Importá el archivo `BDD/vertex_inv.sql`
-
-3. **Configurar la conexión**
-   - Copiá `.env.example.php` y renombralo a `.env.php`
-   - Editá `.env.php` con tus credenciales locales:
-   \`\`\`php
-   define('DB_HOST', 'localhost');
-   define('DB_USER', 'root');
-   define('DB_PASS', '');
-   define('DB_NAME', 'vertex_inv');
-   define('ENVIRONMENT', 'development');
-   define('BASE_URL', '/VERTEX-INV');
-   \`\`\`
-
-4. **Configurar permisos**
-   \`\`\`bash
-   chmod 755 modulos/img
-   chmod 755 logs
-   \`\`\`
-
-5. **Acceder al sistema**
-   - Abrí tu navegador en: `http://localhost/VERTEX-INV`
-
-### Instalación en Hostinger
-
-Seguí las instrucciones detalladas en el archivo `INSTRUCCIONES_HOSTINGER.md`
-
-
-## 🔒 Seguridad
-
-El sistema incluye las siguientes medidas de seguridad:
-
-- ✅ Sanitización de inputs
-- ✅ Prepared statements para prevenir SQL injection
-- ✅ Validación de tipos de archivo en uploads
-- ✅ Protección de archivos sensibles (.env.php, .htaccess)
-- ✅ Headers de seguridad configurados
-- ✅ Límites de tamaño de archivo
-- ✅ Optimización automática de imágenes
 
 ### Versión 2.0 (Optimizada para Hosting)
 - ✅ Sistema de configuración con variables de entorno
@@ -106,6 +36,8 @@ El sistema incluye las siguientes medidas de seguridad:
 - ✅ CRUD de productos, categorías, clientes, proveedores
 - ✅ Sistema de pedidos
 - ✅ Búsqueda global
+  Version 1:
+- 🛠️ https://github.com/damianfuchs/vertex_V1
 
 
 ## 📄 Licencia

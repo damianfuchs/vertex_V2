@@ -1,0 +1,62 @@
+:root {
+      --background-color: white;
+      --text-title-color: #053D4E;
+      --text-color: #32363B;
+      --icon-color: #32363B;
+      --icon-menu-color: #707780;
+      --menu-color: #707780;
+      --text-selected-color: #355CC0;
+      --background-selected: #EBF0FF;
+      --backrgound-hover: #F7F9FA;
+      --border-color: #E6E9ED;
+    }
+
+    body {
+      background-color: var(--background-color);
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: var(--text-title-color);
+      margin-bottom: 30px;
+    }
+
+    .card-inventario {
+      display: flex;
+      align-items: center;
+      background-color: var(--background-color);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-inventario:hover {
+      background-color: var(--background-selected);
+      cursor: pointer;
+    }
+
+    .card-inventario i {
+      font-size: 2rem;
+      color: var(--icon-color);
+      margin-right: 15px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      color: var(--text-title-color);
+      margin: 0;
+    }
+
+    .card-count {
+      font-size: 1.2rem;
+      color: var(--text-selected-color);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }

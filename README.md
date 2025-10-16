@@ -79,42 +79,6 @@ Sistema completo de gestión de inventario desarrollado en PHP y MySQL, diseñad
 
 Seguí las instrucciones detalladas en el archivo `INSTRUCCIONES_HOSTINGER.md`
 
-## 📁 Estructura del Proyecto
-
-\`\`\`
-VERTEX-INV/
-├── BDD/
-│   └── vertex_inv.sql          # Script de base de datos
-├── iconos/                     # Iconos SVG del sistema
-├── img/                        # Imágenes estáticas
-├── modulos/
-│   ├── controllers/            # Controladores PHP (CRUD)
-│   ├── db/
-│   │   └── conexion.php       # Conexión a base de datos
-│   ├── helpers/               # Funciones auxiliares
-│   │   ├── security.php       # Funciones de seguridad
-│   │   └── upload.php         # Manejo de uploads
-│   ├── img/                   # Imágenes de productos
-│   ├── js/                    # Scripts JavaScript
-│   │   ├── main.js           # Script principal
-│   │   ├── productos.js      # Gestión de productos
-│   │   ├── categorias.js     # Gestión de categorías
-│   │   └── ...
-│   ├── config.php            # Configuración general
-│   ├── inicio.php            # Dashboard
-│   ├── productos.php         # Vista de productos
-│   ├── categorias.php        # Vista de categorías
-│   └── ...
-├── logs/                      # Logs de errores
-├── .env.example.php          # Ejemplo de configuración
-├── .env.php                  # Configuración (no subir a Git)
-├── .gitignore               # Archivos ignorados por Git
-├── .htaccess                # Configuración Apache
-├── index.php                # Punto de entrada
-├── style.css                # Estilos principales
-├── README.md                # Este archivo
-└── INSTRUCCIONES_HOSTINGER.md
-\`\`\`
 
 ## 🔒 Seguridad
 
@@ -127,67 +91,6 @@ El sistema incluye las siguientes medidas de seguridad:
 - ✅ Headers de seguridad configurados
 - ✅ Límites de tamaño de archivo
 - ✅ Optimización automática de imágenes
-
-## 🎨 Personalización
-
-### Cambiar Colores
-Editá las variables CSS en `style.css`:
-\`\`\`css
-:root{
-    --background-color: white;
-    --text-title-color: #053D4E;
-    --text-color: #32363B;
-    --icon-color: #32363B;
-    /* ... más variables ... */
-}
-\`\`\`
-
-### Cambiar Logo
-Reemplazá el archivo `img/logovertex.jpg` con tu logo
-
-### Modificar Nombre
-Editá `index.php` y cambiá:
-\`\`\`html
-<span class="name">VERTEX</span>
-\`\`\`
-
-## 📊 Base de Datos
-
-### Tablas Principales
-
-- **productos**: Inventario de productos
-- **categorias**: Categorías de productos
-- **proveedores**: Información de proveedores
-- **clientes**: Base de datos de clientes
-- **pedidos**: Registro de pedidos
-
-### Relaciones
-
-- `productos.categoria_id` → `categorias.id_categ` (Foreign Key)
-
-## 🐛 Solución de Problemas Comunes
-
-### Error de conexión a la base de datos
-- Verificá las credenciales en `.env.php`
-- Asegurate de que MySQL esté corriendo
-- Verificá que la base de datos exista
-
-### Las imágenes no se cargan
-- Verificá permisos de la carpeta `modulos/img/` (755 o 775)
-- Asegurate de que la carpeta exista
-- Revisá la configuración de `upload_max_filesize` en php.ini
-
-### Error 500
-- Revisá los logs en `logs/php-errors.log`
-- Verificá que `.htaccess` sea compatible con tu servidor
-- Asegurate de que mod_rewrite esté habilitado
-
-### Páginas en blanco
-- Activá el modo desarrollo en `.env.php`
-- Revisá la consola del navegador (F12)
-- Verificá los logs de PHP
-
-## 📝 Changelog
 
 ### Versión 2.0 (Optimizada para Hosting)
 - ✅ Sistema de configuración con variables de entorno
@@ -204,32 +107,7 @@ Editá `index.php` y cambiá:
 - ✅ Sistema de pedidos
 - ✅ Búsqueda global
 
-## 👨‍💻 Desarrollo
-
-### Agregar un Nuevo Módulo
-
-1. Creá el archivo PHP en `modulos/nombre_modulo.php`
-2. Creá el controlador en `modulos/controllers/`
-3. Creá el script JS en `modulos/js/nombre_modulo.js`
-4. Agregá el enlace en el sidebar de `index.php`
-5. Actualizá `main.js` para cargar el script
-
-### Convenciones de Código
-
-- Usá nombres descriptivos en español argentino
-- Comentá el código complejo
-- Seguí la estructura MVC existente
-- Usá prepared statements para consultas SQL
-- Sanitizá todos los inputs del usuario
-
-## 📞 Soporte
-
-Para reportar bugs o solicitar features, creá un issue en el repositorio.
 
 ## 📄 Licencia
 
 Este proyecto es de uso privado. Todos los derechos reservados.
-
----
-
-Desarrollado con ❤️ para VERTEX
